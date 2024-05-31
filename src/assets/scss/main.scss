@@ -9,8 +9,14 @@ body{
 }
 
 .main-wrapper{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ padding-top: 40px;
+}
+
+.container{
+max-width: 200px;
+margin: 0 auto;
+}
+
+ul{
+  list-style: none;
 }

@@ -1,13 +1,11 @@
 *{
-  margin: 0;
+  // margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
-}
 
 .main-wrapper{
- padding-top: 40px;
+  padding-top: 40px;
 }
 
 .container{
@@ -17,4 +15,5 @@ margin: 0 auto;
 
 ul{
   list-style: none;
+  padding: 20px;
 }

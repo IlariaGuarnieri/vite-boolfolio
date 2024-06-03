@@ -6,9 +6,9 @@ export default {
 
 <template>
 <header>
-    <router-link :to="{name: 'home'}">home</router-link>
-    <router-link :to="{name: 'contacts'}">contatti</router-link>
-    <router-link :to="{name: 'about'}">chi siamo</router-link>
+    <router-link class="link_style" :to="{name: 'home'}">Home</router-link>
+    <router-link class="link_style" :to="{name: 'contacts'}">Contatti</router-link>
+    <router-link class="link_style" :to="{name: 'about'}">Chi siamo</router-link>
     <!-- anzichè cosi:-->
     <!-- <li><a href="#">home</a></li>
       <li><a href="#">chi siamo</a></li>
@@ -19,14 +19,17 @@ export default {
 
 <style lang="scss" scoped>
   header{
-    ul{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-      li{
-        list-style: none;
+    .link_style{
+      color: black;
+      width: 100%;
+      list-style: none;
+          text-decoration: none;
+          margin: 20px;
+          text-transform: uppercase;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
       }
-    }
-  } 
+    
 </style>

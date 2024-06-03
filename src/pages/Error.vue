@@ -10,7 +10,6 @@ export default {
       error 404 
     </h1>
     <p>
-
       pagina non trovata
     </p>
   </div>

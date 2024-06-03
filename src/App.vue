@@ -1,29 +1,31 @@
 <script>
-import Header from './components/Header.vue'
+import Header from './components/partials/Header.vue'
 
 export default {
   data(){
     return{
-      components: Header
-
     }
   },
+
+  components:{
+    Header
+  }, 
+
   methods:{
 
   },
+
   mounted(){
-    
   }
 }
 </script>
 
 <template>
-  <header>
-    <router-link :to="{name: 'home'}">home</router-link>
-    <router-link :to="{name: 'contacts'}">contatti</router-link>
-    <router-link :to="{name: 'about'}">chi siamo</router-link>
-  </header>
+  <div>
+    <Header />
+    
     <router-view></router-view>
+  </div>
 </template>
 
 <style lang="scss" scoped>

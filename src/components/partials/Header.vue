@@ -6,20 +6,19 @@ export default {
 
 <template>
 <header>
-<nav>
-  <ul>
-    <li><router-link :to="{name: 'home'}">home</router-link></li>
-    <li><router-link :to="{name: 'abut'}">chi siamo</router-link></li>
+    <router-link :to="{name: 'home'}">home</router-link>
+    <router-link :to="{name: 'contacts'}">contatti</router-link>
+    <router-link :to="{name: 'about'}">chi siamo</router-link>
+    <!-- anzichè cosi:-->
     <!-- <li><a href="#">home</a></li>
-    <li><a href="#">chi siamo</a></li>
-  </ul> -->
-  </ul>
-</nav>
-</header>
+      <li><a href="#">chi siamo</a></li>
+    </ul> -->
+  </header>
+
 </template>
 
 <style lang="scss" scoped>
-   header{
+  header{
     ul{
       display: flex;
       justify-content: center;

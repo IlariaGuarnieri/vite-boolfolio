@@ -8,7 +8,7 @@ export default {
 <header>
     <router-link class="link_style" :to="{name: 'home'}">Home</router-link>
     <router-link class="link_style" :to="{name: 'contacts'}">Contatti</router-link>
-    <router-link class="link_style" :to="{name: 'about'}">Chi siamo</router-link>
+    <router-link class="link_style" :to="{name: 'about'}">Progetti</router-link>
     <!-- anzichè cosi:-->
     <!-- <li><a href="#">home</a></li>
       <li><a href="#">chi siamo</a></li>

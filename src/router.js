@@ -3,6 +3,7 @@ import Home from './pages/Home.vue';
 import About from './pages/About.vue';
 import Contacts from './pages/Contacts.vue'
 import Error from './pages/Error.vue'
+import Technologies from './pages/Technologies.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,7 +14,7 @@ const router = createRouter({
       component: Home,
     },
     {
-      path: '/chi-siamo',
+      path: '/progetti',
       name: 'about',
       component: About,
     },
@@ -21,6 +22,11 @@ const router = createRouter({
       path: '/contatti',
       name: 'contacts',
       component: Contacts,
+    },
+    {
+      path: '/technologies',
+      name: 'technologies',
+      component: Technologies,
     },
     {
       path: '/:pathMatch(.*)*',

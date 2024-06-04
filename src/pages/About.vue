@@ -45,9 +45,7 @@ export default {
         <ProjectCard 
         v-for="project in projects " 
         :key="project.id"
-        :id="project.id"
-        :title="project.title"
-        :technologies="project.technologies"
+        :project="project"
         />
       </div>
 

@@ -4,6 +4,7 @@ import About from './pages/About.vue';
 import Contacts from './pages/Contacts.vue'
 import Error from './pages/Error.vue'
 import Technologies from './pages/Technologies.vue'
+import ProjectDetail from './pages/ProjectDetail.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -27,6 +28,11 @@ const router = createRouter({
       path: '/technologies',
       name: 'technologies',
       component: Technologies,
+    },
+    {
+      path: '/dettaglio-progetti/:slug:',
+      name: 'projectDetail',
+      component: ProjectDetail,
     },
     {
       path: '/:pathMatch(.*)*',

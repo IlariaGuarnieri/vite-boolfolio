@@ -30,7 +30,7 @@ const router = createRouter({
       component: Technologies,
     },
     {
-      path: '/dettaglio-progetti/:slug:',
+      path: '/dettaglio-progetti/:slug',
       name: 'projectDetail',
       component: ProjectDetail,
     },

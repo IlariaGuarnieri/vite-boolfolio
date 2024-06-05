@@ -17,7 +17,7 @@ export default {
   methods: {
     getApi() {
       console.log('get Api');
-      axios.get(store.apiUrl)
+      axios.get(store.apiUrl + 'projects')
         .then(result => {
           this.loading = false;
           this.projects = result.data

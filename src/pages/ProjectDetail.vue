@@ -4,34 +4,45 @@ import { store } from '../data/store';
 
 export default {
   name: 'ProjectDetail',
-  methods:{
-    getApi(){
+  data(){
+    return{
+      store,
+      project: {},
+    };
+  },
+  methods: {
+    getApi() {
       console.log(this.$route.params.slug);
       const slug = this.$route.params.slug;
-      axios.get(store.apiUrl + '/project-by-slug/' + slug)
-      .then(result =>{
-        console.log(result.data)
-      })
-      .catch(error=>{
-        console.log(error.message);
-      });
+      axios.get(store.apiUrl + 'project-by-slug/' + slug)
+        .then(result => {
+          this.project = result.data.project;
+          console.log(this.project);
+        })
+        .catch(error => {
+          console.log(error.message);
+        });
     }
   },
   mounted() {
-  this.getApi()
+    this.getApi()
   }
 }
 </script>
 
 <template>
   <div>
-    <h1>dettaglio:</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum doloremque, aliquam porro fugit obcaecati maiores
-      perspiciatis nihil ab voluptas modi omnis facilis earum maxime et non! Quasi quisquam dolorum ullam!</p>
+    <h1>Dettaglio:</h1>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h3 class="card-title">TITOLO: {{ project.title }}</h3>
+        <h5>ID: {{ project.id }}</h5>
+        <h5>TECNOLOGIA: </h5>
+       
+      </div>
+    </div>
   </div>
 </template>
 
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

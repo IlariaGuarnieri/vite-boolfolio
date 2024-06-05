@@ -33,11 +33,15 @@ export default {
 <template>
   <div>
     <h1>Dettaglio:</h1>
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 20rem;">
       <div class="card-body">
         <h3 class="card-title">TITOLO: {{ project.title }}</h3>
         <h5>ID: {{ project.id }}</h5>
         <h5>TECNOLOGIA: </h5>
+        <span class="badge rounded-pill text-bg-info me-1"
+        v-for="(technology, index) in project.technologies"
+        :key="index"
+        >{{ technology.title }}</span>
        
       </div>
     </div>
